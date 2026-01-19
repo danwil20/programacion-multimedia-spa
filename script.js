@@ -1,3 +1,5 @@
+
+console.log("✅ JavaScript cargado correctamente");
 const contenido = document.getElementById("contenido");
 const enlaces = document.querySelectorAll("nav a");
 
