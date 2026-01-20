@@ -34,7 +34,7 @@ main {
 }
 
 main img {
-  max-width: 80%;  /* Ajusta el tamaño máximo de la imagen */
+  max-width: 50%;  /* Reducido al 50% del ancho de la pantalla */
   height: auto;
   border-radius: 8px;
   margin: 20px 0;
