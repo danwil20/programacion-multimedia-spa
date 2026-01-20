@@ -34,7 +34,7 @@ main {
 }
 
 main img {
-  max-width: 100%;
+  max-width: 80%;  /* Ajusta el tamaño máximo de la imagen */
   height: auto;
   border-radius: 8px;
   margin: 20px 0;
