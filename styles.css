@@ -5,7 +5,7 @@ body {
 }
 
 header, footer {
-  background-color: #ff4500; /* color más deportivo */
+  background-color: #ff4500;
   color: white;
   text-align: center;
   padding: 15px;
@@ -30,6 +30,13 @@ nav a:hover {
 
 main {
   padding: 20px;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
 }
 
 button {
