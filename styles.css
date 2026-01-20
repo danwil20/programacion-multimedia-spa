@@ -30,14 +30,15 @@ nav a:hover {
 
 main {
   padding: 20px;
-  text-align: center;
+  text-align: center; /* todo centrado */
 }
 
 main img {
-  max-width: 30%;  /* Reducido al 30% del ancho de la pantalla */
+  max-width: 20%;  /* Reducida aún más */
   height: auto;
   border-radius: 8px;
-  margin: 20px 0;
+  display: block; /* asegura que esté centrada */
+  margin: 20px auto; /* centrada horizontalmente con margen */
 }
 
 button {
@@ -46,9 +47,16 @@ button {
   color: white;
   border: none;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 15px;
+  display: block; /* centrado */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button:hover {
   background-color: #ffa500;
+}
+
+#info {
+  margin-top: 10px;
 }
