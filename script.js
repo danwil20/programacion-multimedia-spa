@@ -14,14 +14,14 @@ function cargarSeccion(seccion) {
     contenido.innerHTML = `
       <h2>Inicio</h2>
       <p>Bienvenido a Gym Fitness SPA. Explora nuestras rutinas y consejos para mantenerte en forma.</p>
-      <img src="https://via.placeholder.com/400x200?text=Gym+Fitness" alt="Gym Fitness">
+      <img src="Gym.jpg" alt="Imagen del Gym"> <!-- Imagen añadida -->
     `;
   }
 
   if (seccion === "rutinas") {
     contenido.innerHTML = `
       <h2>Rutinas de Entrenamiento</h2>
-      <img src="https://via.placeholder.com/300x200?text=Rutinas" alt="Rutinas">
+      <img src="images/rutinas.jpg" alt="Rutinas">
       <br><br>
       <button id="btnInfo">Mostrar Descripción</button>
       <p id="info" style="display:none;">
