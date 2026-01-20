@@ -12,6 +12,11 @@ enlaces.forEach(enlace => {
   });
 });
 
+// Cargar la sección 'inicio' por defecto al cargar la página
+document.addEventListener("DOMContentLoaded", () => {
+  cargarSeccion("inicio");
+});
+
 function cargarSeccion(seccion) {
   if (seccion === "inicio") {
     contenido.innerHTML = `
