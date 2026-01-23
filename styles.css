@@ -30,17 +30,31 @@ nav a:hover {
 
 main {
   padding: 20px;
+}
+
+/* Layout 3 columnas */
+.layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Texto central */
+.texto-centro {
+  flex: 2;
   text-align: center;
 }
 
-main img {
-  max-width: 20%;
+/* Imágenes laterales */
+.img-lado {
+  flex: 1;
+  max-width: 150px;
   height: auto;
   border-radius: 8px;
-  display: block;
-  margin: 20px auto;
 }
 
+/* Botón */
 button {
   padding: 10px 15px;
   background-color: #ff4500;
@@ -48,21 +62,20 @@ button {
   border: none;
   cursor: pointer;
   margin-top: 15px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 button:hover {
   background-color: #ffa500;
 }
 
+/* Input */
 input {
   padding: 8px;
   width: 250px;
   margin-top: 10px;
 }
 
+/* Mensaje de error */
 #mensajeError {
   color: red;
   margin-top: 8px;
