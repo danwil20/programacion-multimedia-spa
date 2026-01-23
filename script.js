@@ -1,10 +1,10 @@
 const contenido = document.getElementById("contenido");
 const enlaces = document.querySelectorAll("nav a");
 
-// Imagen centralizada y muy pequeña
+// Imagen reutilizable
 const imagenGym = '<img src="Gym.jpg" alt="Imagen del Gym">';
 
-// Escuchar los clics en la navegación
+// Eventos del menú
 enlaces.forEach(enlace => {
   enlace.addEventListener("click", (e) => {
     e.preventDefault();
@@ -13,51 +13,61 @@ enlaces.forEach(enlace => {
   });
 });
 
-// Cargar la sección 'inicio' automáticamente al iniciar
+// Cargar inicio automáticamente
 document.addEventListener("DOMContentLoaded", () => {
   cargarSeccion("inicio");
 });
 
+// Función principal de carga
 function cargarSeccion(seccion) {
-  let contenidoHTML = '';
+  let contenidoHTML = "";
 
-  // Sección Inicio
   if (seccion === "inicio") {
     contenidoHTML = `
       <h2>Inicio</h2>
-      <p>Bienvenido a Gym Fitness SPA. Explora nuestras rutinas y consejos para mantenerte en forma.</p>
-      ${imagenGym}
-      <button id="btnInfo">Mostrar Descripción</button>
-      <p id="info" style="display:none;">Este SPA muestra rutinas y tips de gym sin recargar la página.</p>
-    `;
-  }
-
-  // Sección Rutinas
-  if (seccion === "rutinas") {
-    contenidoHTML = `
-      <h2>Rutinas de Entrenamiento</h2>
-      <p>Cardio, fuerza, HIIT y más. Encuentra la rutina que mejor se adapte a tus objetivos.</p>
+      <p>Bienvenido a Gym Fitness SPA. Explora nuestras rutinas y consejos.</p>
       ${imagenGym}
       <button id="btnInfo">Mostrar Descripción</button>
       <p id="info" style="display:none;">
-        Aquí encontrarás rutinas para principiantes y avanzados: cardio, fuerza, HIIT y más.
+        Este SPA muestra rutinas y tips de gym sin recargar la página.
       </p>
     `;
   }
 
-  // Sección Contacto
+  if (seccion === "rutinas") {
+    contenidoHTML = `
+      <h2>Rutinas de Entrenamiento</h2>
+      <p>Cardio, fuerza, HIIT y más.</p>
+      ${imagenGym}
+      <button id="btnInfo">Mostrar Descripción</button>
+      <p id="info" style="display:none;">
+        Rutinas para principiantes y avanzados.
+      </p>
+    `;
+  }
+
   if (seccion === "contacto") {
     contenidoHTML = `
       <h2>Contacto</h2>
-      <p>Email: contacto@gymfitness.com</p>
-      <p>Teléfono: +58 212 1234567</p>
+      <p>Déjanos tu correo para contactarte:</p>
+
+      <input 
+        type="email" 
+        id="email"
+        placeholder="Ingresa tu email"
+      >
+
+      <p id="mensajeError">
+        El campo no puede estar vacío
+      </p>
+
       ${imagenGym}
     `;
   }
 
   contenido.innerHTML = contenidoHTML;
 
-  // Activar botón de descripción si existe
+  // Botón info
   const btnInfo = document.getElementById("btnInfo");
   if (btnInfo) {
     btnInfo.addEventListener("click", () => {
@@ -65,4 +75,28 @@ function cargarSeccion(seccion) {
       info.style.display = info.style.display === "none" ? "block" : "none";
     });
   }
+
+  // Validación interactiva
+  const emailInput = document.getElementById("email");
+  const mensajeError = document.getElementById("mensajeError");
+
+  if (emailInput) {
+    mensajeError.style.display = "none";
+
+    emailInput.addEventListener("input", () => {
+      if (!validarCampoVacio(emailInput.value)) {
+        mensajeError.style.display = "block";
+      } else {
+        mensajeError.style.display = "none";
+      }
+    });
+  }
+}
+
+// FUNCIÓN DE UTILIDAD REUTILIZABLE
+function validarCampoVacio(valor) {
+  if (valor.trim() === "") {
+    return false;
+  }
+  return true;
 }
