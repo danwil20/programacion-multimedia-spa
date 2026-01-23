@@ -28,8 +28,10 @@ nav a:hover {
   color: #ffa500;
 }
 
+/* 🔹 MÁS ESPACIO ENTRE NAV Y FOOTER */
 main {
-  padding: 20px;
+  padding: 40px 20px;
+  margin: 40px 0;
 }
 
 /* Layout 3 columnas */
