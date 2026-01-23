@@ -1,8 +1,9 @@
 const contenido = document.getElementById("contenido");
 const enlaces = document.querySelectorAll("nav a");
 
-// Imagen reutilizable
-const imagenGym = '<img src="Gym.jpg" alt="Imagen del Gym">';
+// Imágenes laterales
+const imagenIzquierda = '<img src="Gym.jpg" class="img-lado" alt="Imagen izquierda">';
+const imagenDerecha = '<img src="Gym2.jpg" class="img-lado" alt="Imagen derecha">';
 
 // Eventos del menú
 enlaces.forEach(enlace => {
@@ -18,50 +19,76 @@ document.addEventListener("DOMContentLoaded", () => {
   cargarSeccion("inicio");
 });
 
-// Función principal de carga
+// Función principal
 function cargarSeccion(seccion) {
   let contenidoHTML = "";
 
   if (seccion === "inicio") {
     contenidoHTML = `
-      <h2>Inicio</h2>
-      <p>Bienvenido a Gym Fitness SPA. Explora nuestras rutinas y consejos.</p>
-      ${imagenGym}
-      <button id="btnInfo">Mostrar Descripción</button>
-      <p id="info" style="display:none;">
-        Este SPA muestra rutinas y tips de gym sin recargar la página.
-      </p>
+      <div class="layout">
+        ${imagenIzquierda}
+
+        <div class="texto-centro">
+          <h2>Inicio</h2>
+          <p>
+            Bienvenido a Gym Fitness SPA. Explora nuestras rutinas y consejos
+            para mantenerte en forma.
+          </p>
+
+          <button id="btnInfo">Mostrar Descripción</button>
+          <p id="info" style="display:none;">
+            Este SPA muestra rutinas y tips de gym sin recargar la página.
+          </p>
+        </div>
+
+        ${imagenDerecha}
+      </div>
     `;
   }
 
   if (seccion === "rutinas") {
     contenidoHTML = `
-      <h2>Rutinas de Entrenamiento</h2>
-      <p>Cardio, fuerza, HIIT y más.</p>
-      ${imagenGym}
-      <button id="btnInfo">Mostrar Descripción</button>
-      <p id="info" style="display:none;">
-        Rutinas para principiantes y avanzados.
-      </p>
+      <div class="layout">
+        ${imagenIzquierda}
+
+        <div class="texto-centro">
+          <h2>Rutinas de Entrenamiento</h2>
+          <p>
+            Cardio, fuerza, HIIT y más. Encuentra la rutina ideal según
+            tus objetivos.
+          </p>
+
+          <button id="btnInfo">Mostrar Descripción</button>
+          <p id="info" style="display:none;">
+            Rutinas para principiantes y avanzados.
+          </p>
+        </div>
+
+        ${imagenDerecha}
+      </div>
     `;
   }
 
   if (seccion === "contacto") {
     contenidoHTML = `
-      <h2>Contacto</h2>
-      <p>Déjanos tu correo para contactarte:</p>
+      <div class="layout">
+        ${imagenIzquierda}
 
-      <input 
-        type="email" 
-        id="email"
-        placeholder="Ingresa tu email"
-      >
+        <div class="texto-centro">
+          <h2>Contacto</h2>
+          <p>Déjanos tu correo para contactarte:</p>
 
-      <p id="mensajeError">
-        El campo no puede estar vacío
-      </p>
+          <input 
+            type="email" 
+            id="email"
+            placeholder="Ingresa tu email"
+          >
 
-      ${imagenGym}
+          <p id="mensajeError">El campo no puede estar vacío</p>
+        </div>
+
+        ${imagenDerecha}
+      </div>
     `;
   }
 
@@ -93,10 +120,7 @@ function cargarSeccion(seccion) {
   }
 }
 
-// FUNCIÓN DE UTILIDAD REUTILIZABLE
+// Función reutilizable
 function validarCampoVacio(valor) {
-  if (valor.trim() === "") {
-    return false;
-  }
-  return true;
+  return valor.trim() !== "";
 }
