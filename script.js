@@ -16,12 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
   cargarSeccion("inicio");
 });
 
-/* ========= UTILIDAD ========= */
 function validarCampoVacio(valor) {
   return valor.trim() !== "";
 }
 
-/* ========= SECCIONES ========= */
 function cargarSeccion(seccion) {
   let html = "";
 
@@ -38,11 +36,11 @@ function cargarSeccion(seccion) {
             hábitos saludables y mejora del rendimiento.
           </p>
           <p>
-            Aquí encontrarás rutinas organizadas por grupos musculares,
-            contenido multimedia y animaciones interactivas.
+            Contenido multimedia, animaciones y rutinas estructuradas
+            para estudiantes y entusiastas del fitness.
           </p>
           <p>
-            Haz scroll para activar efectos visuales dinámicos.
+            Haz scroll para activar el cambio de color del texto.
           </p>
         </div>
 
@@ -74,21 +72,9 @@ function cargarSeccion(seccion) {
           </ul>
 
           <p class="rutina-texto">
-            Deja al menos 48 horas entre el trabajo de un mismo grupo muscular.
+            Ejercicios: press banca, dominadas, sentadillas, hip thrust,
+            press militar, curl bíceps y trabajo de core.
           </p>
-
-          <p class="rutina-texto">
-            <strong>Ejercicios recomendados:</strong><br>
-            <strong>Pecho:</strong> Press banca, fondos, aperturas.<br>
-            <strong>Espalda:</strong> Dominadas, remo, jalón al pecho.<br>
-            <strong>Piernas:</strong> Sentadillas, prensa, zancadas.<br>
-            <strong>Glúteos:</strong> Hip thrust, peso muerto rumano.<br>
-            <strong>Hombros:</strong> Press militar, elevaciones laterales.<br>
-            <strong>Brazos:</strong> Curl bíceps, extensiones de tríceps.<br>
-            <strong>Core:</strong> Planchas, crunches, elevaciones de piernas.
-          </p>
-
-          <hr>
 
           <video id="videoRutina" width="320">
             <source src="rutina.mp4" type="video/mp4">
@@ -112,13 +98,11 @@ function cargarSeccion(seccion) {
       <div class="layout animacion-css">
         ${imagenIzquierda}
 
-        <div class="texto-centro" id="textoColor">
+        <div class="texto-centro">
           <h2>Contacto</h2>
 
           <input type="email" id="email" placeholder="Ingresa tu email">
           <p id="mensajeError">El campo no puede estar vacío</p>
-
-          <hr>
 
           <p><strong>Teléfono:</strong> 0416-1420691</p>
           <p><strong>Instagram:</strong> @danwil16</p>
@@ -132,7 +116,7 @@ function cargarSeccion(seccion) {
 
   contenido.innerHTML = html;
 
-  /* ===== VIDEO ===== */
+  /* VIDEO */
   const video = document.getElementById("videoRutina");
   const playBtn = document.getElementById("playBtn");
   const pauseBtn = document.getElementById("pauseBtn");
@@ -142,7 +126,7 @@ function cargarSeccion(seccion) {
     pauseBtn.onclick = () => video.pause();
   }
 
-  /* ===== VALIDACIÓN ===== */
+  /* VALIDACIÓN */
   const email = document.getElementById("email");
   const error = document.getElementById("mensajeError");
 
@@ -154,10 +138,10 @@ function cargarSeccion(seccion) {
   }
 }
 
-/* ===== CAMBIO DE COLOR CON SCROLL ===== */
+/* ===== SCROLL REAL ===== */
 window.addEventListener("scroll", () => {
   const texto = document.querySelector(".scroll-color");
   if (!texto) return;
 
-  texto.style.color = window.scrollY > 50 ? "#ff4500" : "#000";
+  texto.classList.toggle("color-activo", window.scrollY > 80);
 });
