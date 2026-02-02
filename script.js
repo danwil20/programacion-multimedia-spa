@@ -1,7 +1,4 @@
-// === ELEMENTO PRINCIPAL ===
 const contenido = document.getElementById("contenido");
-
-// === FUNCIÓN UTILIDAD ===
 function renderContenido(html) {
   try {
     if (!contenido) {
@@ -12,8 +9,6 @@ function renderContenido(html) {
     console.error("Error al renderizar contenido:", error.message);
   }
 }
-
-// === SECCIONES ===
 function cargarInicio() {
   renderContenido(`
     <div class="layout">
@@ -83,8 +78,6 @@ function cargarContacto() {
     </div>
   `);
 }
-
-// === NAVEGACIÓN ===
 function iniciarNavegacion() {
   try {
     document.querySelectorAll("nav a").forEach(link => {
@@ -101,7 +94,5 @@ function iniciarNavegacion() {
     console.error("Error en navegación:", error.message);
   }
 }
-
-// === INICIO ===
 iniciarNavegacion();
 cargarInicio();
