@@ -12,7 +12,6 @@ body {
   background-color: #f4f4f4;
 }
 
-/* HEADER */
 header {
   background-color: #ff4500;
   color: white;
@@ -20,7 +19,7 @@ header {
   padding: 25px 10px;
 }
 
-/* NAV */
+
 nav {
   background-color: #333;
   padding: 14px;
@@ -39,16 +38,16 @@ nav a:hover {
   color: #ffa500;
 }
 
-/* MAIN → más aire en inicio y contacto */
+
 main {
   background: white;
   width: 90%;
   margin: 25px auto;
-  padding: 40px; /* 👈 MÁS espacio en blanco */
+  padding: 40px; 
   border-radius: 12px;
 }
 
-/* LAYOUT */
+
 .layout {
   display: flex;
   align-items: center;
@@ -56,7 +55,7 @@ main {
   gap: 25px;
 }
 
-/* TEXTO */
+
 .texto-centro {
   flex: 2;
   text-align: center;
@@ -67,13 +66,13 @@ main {
   line-height: 1.7;
 }
 
-/* IMÁGENES */
+
 .img-lado {
   max-width: 180px;
   border-radius: 12px;
 }
 
-/* RUTINAS */
+
 .rutinas-centrado {
   text-align: center;
 }
@@ -88,13 +87,11 @@ main {
   margin: 6px 0;
 }
 
-/* VIDEO */
 video {
   display: block;
   margin: 20px auto 0 auto;
 }
 
-/* FOOTER */
 footer {
   background-color: #ff4500;
   color: white;
