@@ -1,7 +1,21 @@
+// === ELEMENTO PRINCIPAL ===
 const contenido = document.getElementById("contenido");
 
+// === FUNCIÓN UTILIDAD ===
+function renderContenido(html) {
+  try {
+    if (!contenido) {
+      throw new Error("Elemento #contenido no encontrado");
+    }
+    contenido.innerHTML = html;
+  } catch (error) {
+    console.error("Error al renderizar contenido:", error.message);
+  }
+}
+
+// === SECCIONES ===
 function cargarInicio() {
-  contenido.innerHTML = `
+  renderContenido(`
     <div class="layout">
       <img src="Gym.jpg" class="img-lado">
 
@@ -13,11 +27,11 @@ function cargarInicio() {
 
       <img src="Gym2.jpg" class="img-lado">
     </div>
-  `;
+  `);
 }
 
 function cargarRutinas() {
-  contenido.innerHTML = `
+  renderContenido(`
     <div class="layout">
       <img src="Gym.jpg" class="img-lado">
 
@@ -30,11 +44,6 @@ function cargarRutinas() {
         <p><strong>Miércoles:</strong> piernas + glúteos</p>
         <p><strong>Jueves:</strong> hombros + abdominales</p>
         <p><strong>Viernes:</strong> piernas o circuito metabólico</p>
-
-        <p>
-          Deja al menos 48 horas entre el trabajo de un mismo grupo muscular
-          para favorecer la recuperación.
-        </p>
 
         <h3>Ejercicios recomendados</h3>
         <ul>
@@ -53,11 +62,11 @@ function cargarRutinas() {
 
       <img src="Gym2.jpg" class="img-lado">
     </div>
-  `;
+  `);
 }
 
 function cargarContacto() {
-  contenido.innerHTML = `
+  renderContenido(`
     <div class="layout">
       <img src="Gym.jpg" class="img-lado">
 
@@ -72,17 +81,27 @@ function cargarContacto() {
 
       <img src="Gym2.jpg" class="img-lado">
     </div>
-  `;
+  `);
 }
 
-document.querySelectorAll("nav a").forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
-    const s = link.dataset.section;
-    if (s === "inicio") cargarInicio();
-    if (s === "rutinas") cargarRutinas();
-    if (s === "contacto") cargarContacto();
-  });
-});
+// === NAVEGACIÓN ===
+function iniciarNavegacion() {
+  try {
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const seccion = link.dataset.section;
 
+        if (seccion === "inicio") cargarInicio();
+        if (seccion === "rutinas") cargarRutinas();
+        if (seccion === "contacto") cargarContacto();
+      });
+    });
+  } catch (error) {
+    console.error("Error en navegación:", error.message);
+  }
+}
+
+// === INICIO ===
+iniciarNavegacion();
 cargarInicio();
