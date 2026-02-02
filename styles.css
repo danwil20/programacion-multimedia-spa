@@ -50,6 +50,20 @@ main {
   text-align: center;
   flex: 2;
   transition: color 0.5s ease, transform 0.5s ease;
+  margin-bottom: 0; /* Eliminar margen inferior */
+}
+
+/* Evitar espacio extra en los textos */
+p {
+  margin: 0; /* Quitar margenes por defecto */
+  padding: 0; /* Quitar padding por defecto */
+  line-height: 1.6; /* Mejorar la legibilidad */
+}
+
+.rutina-texto {
+  text-align: left;
+  margin: 10px auto;
+  max-width: 500px;
 }
 
 /* Cambio de color con scroll */
