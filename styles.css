@@ -12,15 +12,6 @@ header, footer {
   padding: 20px;
 }
 
-header h1 {
-  font-size: 32px;
-}
-
-header p,
-footer p {
-  font-size: 18px;
-}
-
 nav {
   background-color: #333;
   padding: 15px;
@@ -29,19 +20,24 @@ nav {
 
 nav a {
   margin: 0 15px;
-  text-decoration: none;
   font-weight: bold;
   font-size: 20px;
   color: #ff4500;
+  text-decoration: none;
 }
 
 nav a:hover {
   color: #ffa500;
 }
 
+/* 🔥 FIX DEFINITIVO */
 main {
+  background-color: white;     /* ← hace visible el contenido */
+  min-height: 300px;           /* ← evita que colapse */
   padding: 50px 30px;
-  margin: 50px 0;
+  margin: 50px auto;
+  width: 90%;
+  border-radius: 10px;
 }
 
 /* Layout 3 columnas */
@@ -52,36 +48,23 @@ main {
   gap: 30px;
 }
 
-/* Texto central */
 .texto-centro {
   flex: 2;
   text-align: center;
 }
 
-.texto-centro h2 {
-  font-size: 28px;
-}
-
-.texto-centro p {
-  font-size: 19px;
-}
-
-/* Imágenes laterales */
 .img-lado {
   flex: 1;
   max-width: 180px;
-  height: auto;
   border-radius: 10px;
 }
 
-/* Botón */
 button {
   padding: 12px 20px;
   background-color: #ff4500;
   color: white;
   border: none;
   cursor: pointer;
-  margin-top: 20px;
   font-size: 18px;
 }
 
@@ -89,17 +72,13 @@ button:hover {
   background-color: #ffa500;
 }
 
-/* Input */
 input {
   padding: 10px;
   width: 280px;
-  margin-top: 15px;
   font-size: 16px;
 }
 
-/* Error */
 #mensajeError {
   color: red;
   margin-top: 10px;
-  font-size: 16px;
 }
