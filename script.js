@@ -4,11 +4,13 @@ function cargarInicio() {
   contenido.innerHTML = `
     <div class="layout">
       <img src="Gym.jpg" class="img-lado">
+
       <div class="texto-centro">
         <h2>Bienvenido al Gym Fitness</h2>
-        <p>Entrena desde casa o en el gimnasio con nuestras rutinas.</p>
-        <p>Mejora tu fuerza, resistencia y disciplina.</p>
+        <p>Entrena desde casa o en el gimnasio con rutinas diseñadas para ti.</p>
+        <p>Mejora tu fuerza, resistencia y constancia.</p>
       </div>
+
       <img src="Gym2.jpg" class="img-lado">
     </div>
   `;
@@ -19,7 +21,7 @@ function cargarRutinas() {
     <div class="layout">
       <img src="Gym.jpg" class="img-lado">
 
-      <div class="texto-centro">
+      <div class="texto-centro rutinas-centrado">
         <h2>Rutina de 5 días</h2>
         <p>Split por grupos musculares (intermedio / avanzado)</p>
 
@@ -29,18 +31,19 @@ function cargarRutinas() {
         <p><strong>Jueves:</strong> hombros + abdominales</p>
         <p><strong>Viernes:</strong> piernas o circuito metabólico</p>
 
-        <p class="rutina-texto">
-          Deja al menos 48 horas entre el trabajo de un mismo grupo muscular.
+        <p>
+          Deja al menos 48 horas entre el trabajo de un mismo grupo muscular
+          para favorecer la recuperación.
         </p>
 
         <h3>Ejercicios recomendados</h3>
         <ul>
-          <li><strong>Pecho:</strong> press banca, fondos</li>
-          <li><strong>Espalda:</strong> dominadas, remo</li>
-          <li><strong>Piernas:</strong> sentadillas, prensa</li>
-          <li><strong>Glúteos:</strong> hip thrust</li>
-          <li><strong>Hombros:</strong> press militar</li>
-          <li><strong>Core:</strong> planchas, crunch</li>
+          <li>Pecho: press banca, fondos</li>
+          <li>Espalda: dominadas, remo</li>
+          <li>Piernas: sentadillas, prensa</li>
+          <li>Glúteos: hip thrust</li>
+          <li>Hombros: press militar</li>
+          <li>Core: planchas, crunch</li>
         </ul>
 
         <video width="320" controls>
@@ -57,13 +60,16 @@ function cargarContacto() {
   contenido.innerHTML = `
     <div class="layout">
       <img src="Gym.jpg" class="img-lado">
+
       <div class="texto-centro">
         <h2>Contacto</h2>
+        <p>Déjanos tu correo para más información</p>
         <input type="email" placeholder="Ingresa tu email">
         <p><strong>Teléfono:</strong> 0416-1420691</p>
         <p><strong>Instagram:</strong> @danwil16</p>
         <p><strong>Correo:</strong> finesacademicosdaniel@gmail.com</p>
       </div>
+
       <img src="Gym2.jpg" class="img-lado">
     </div>
   `;
