@@ -31,13 +31,13 @@ function cargarSeccion(seccion) {
         <div class="texto-centro">
           <h2>Inicio</h2>
           <p>
-            Bienvenido a Gym Fitness SPA. Explora nuestras rutinas y consejos
+            Bienvenido a Gym Fitness. Explora nuestras rutinas y consejos
             para mantenerte en forma.
           </p>
 
           <button id="btnInfo">Mostrar Descripción</button>
           <p id="info" style="display:none;">
-            Este SPA muestra rutinas y tips de gym sin recargar la página.
+            Este sitio muestra rutinas y tips de entrenamiento sin recargar la página.
           </p>
         </div>
 
@@ -60,7 +60,7 @@ function cargarSeccion(seccion) {
 
           <button id="btnInfo">Mostrar Descripción</button>
           <p id="info" style="display:none;">
-            Rutinas para principiantes y avanzados.
+            Rutinas diseñadas para principiantes y usuarios avanzados.
           </p>
         </div>
 
@@ -124,3 +124,4 @@ function cargarSeccion(seccion) {
 function validarCampoVacio(valor) {
   return valor.trim() !== "";
 }
+
