@@ -1,67 +1,61 @@
 const contenido = document.getElementById("contenido");
 const enlaces = document.querySelectorAll("nav a");
 
-// Imágenes laterales
 const imagenIzquierda = '<img src="Gym.jpg" class="img-lado" alt="Imagen izquierda">';
 const imagenDerecha = '<img src="Gym2.jpg" class="img-lado" alt="Imagen derecha">';
 
-// Eventos del menú
 enlaces.forEach(enlace => {
-  enlace.addEventListener("click", (e) => {
+  enlace.addEventListener("click", e => {
     e.preventDefault();
-    const seccion = enlace.dataset.section;
-    cargarSeccion(seccion);
+    cargarSeccion(enlace.dataset.section);
   });
 });
 
-// Cargar inicio automáticamente
 document.addEventListener("DOMContentLoaded", () => {
   cargarSeccion("inicio");
 });
 
-// Función principal
+/* ========= FUNCIÓN DE UTILIDAD ========= */
+function validarCampoVacio(valor) {
+  return valor.trim() !== "";
+}
+
+/* ========= FUNCIÓN PRINCIPAL ========= */
 function cargarSeccion(seccion) {
-  let contenidoHTML = "";
+  let html = "";
 
   if (seccion === "inicio") {
-    contenidoHTML = `
-      <div class="layout">
+    html = `
+      <div class="layout animacion-css">
         ${imagenIzquierda}
-
-        <div class="texto-centro">
+        <div class="texto-centro" id="textoAnimado">
           <h2>Inicio</h2>
           <p>
-            Bienvenido a Gym Fitness. Explora nuestras rutinas y consejos
-            para mantenerte en forma.
-          </p>
-
-          <button id="btnInfo">Mostrar Descripción</button>
-          <p id="info" style="display:none;">
-            Este sitio muestra rutinas y tips de entrenamiento sin recargar la página.
+            Bienvenido a Gym Fitness. Mejora tu salud con nuestras rutinas.
           </p>
         </div>
-
         ${imagenDerecha}
       </div>
     `;
   }
 
   if (seccion === "rutinas") {
-    contenidoHTML = `
-      <div class="layout">
+    html = `
+      <div class="layout animacion-css">
         ${imagenIzquierda}
 
         <div class="texto-centro">
-          <h2>Rutinas de Entrenamiento</h2>
-          <p>
-            Cardio, fuerza, HIIT y más. Encuentra la rutina ideal según
-            tus objetivos.
-          </p>
+          <h2>Rutinas en Video</h2>
 
-          <button id="btnInfo">Mostrar Descripción</button>
-          <p id="info" style="display:none;">
-            Rutinas diseñadas para principiantes y usuarios avanzados.
-          </p>
+          <video id="videoRutina" width="320">
+            <source src="rutina.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+          </video>
+
+          <div class="controles">
+            <button id="playBtn">▶ Reproducir</button>
+            <button id="pauseBtn">⏸ Pausar</button>
+          </div>
         </div>
 
         ${imagenDerecha}
@@ -70,20 +64,13 @@ function cargarSeccion(seccion) {
   }
 
   if (seccion === "contacto") {
-    contenidoHTML = `
-      <div class="layout">
+    html = `
+      <div class="layout animacion-css">
         ${imagenIzquierda}
 
-        <div class="texto-centro">
+        <div class="texto-centro" id="textoColor">
           <h2>Contacto</h2>
-          <p>Déjanos tu correo para contactarte:</p>
-
-          <input 
-            type="email" 
-            id="email"
-            placeholder="Ingresa tu email"
-          >
-
+          <input type="email" id="email" placeholder="Ingresa tu email">
           <p id="mensajeError">El campo no puede estar vacío</p>
         </div>
 
@@ -92,35 +79,36 @@ function cargarSeccion(seccion) {
     `;
   }
 
-  contenido.innerHTML = contenidoHTML;
+  contenido.innerHTML = html;
 
-  // Botón info
-  const btnInfo = document.getElementById("btnInfo");
-  if (btnInfo) {
-    btnInfo.addEventListener("click", () => {
-      const info = document.getElementById("info");
-      info.style.display = info.style.display === "none" ? "block" : "none";
-    });
+  /* === VIDEO CONTROLES === */
+  const video = document.getElementById("videoRutina");
+  const playBtn = document.getElementById("playBtn");
+  const pauseBtn = document.getElementById("pauseBtn");
+
+  if (video) {
+    playBtn.onclick = () => video.play();
+    pauseBtn.onclick = () => video.pause();
   }
 
-  // Validación interactiva
-  const emailInput = document.getElementById("email");
-  const mensajeError = document.getElementById("mensajeError");
+  /* === VALIDACIÓN === */
+  const email = document.getElementById("email");
+  const error = document.getElementById("mensajeError");
 
-  if (emailInput) {
-    mensajeError.style.display = "none";
-
-    emailInput.addEventListener("input", () => {
-      if (!validarCampoVacio(emailInput.value)) {
-        mensajeError.style.display = "block";
-      } else {
-        mensajeError.style.display = "none";
-      }
-    });
+  if (email) {
+    error.style.display = "none";
+    email.oninput = () => {
+      error.style.display = validarCampoVacio(email.value) ? "none" : "block";
+    };
   }
-}
 
-// Función reutilizable
-function validarCampoVacio(valor) {
-  return valor.trim() !== "";
+  /* === ANIMACIÓN JS (setTimeout) === */
+  const texto = document.getElementById("textoAnimado") || document.getElementById("textoColor");
+
+  if (texto) {
+    setTimeout(() => {
+      texto.style.color = "#ff4500";
+      texto.style.transform = "scale(1.05)";
+    }, 2000);
+  }
 }
