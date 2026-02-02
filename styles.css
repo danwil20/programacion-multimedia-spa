@@ -60,12 +60,6 @@ p {
   line-height: 1.6; /* Mejorar la legibilidad */
 }
 
-.rutina-texto {
-  text-align: left;
-  margin: 10px auto;
-  max-width: 500px;
-}
-
 /* Cambio de color con scroll */
 .color-activo {
   color: #ff4500;
@@ -126,12 +120,4 @@ button:hover {
 hr {
   display: none !important;
   border: none !important;
-  height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Por seguridad visual */
-video {
-  border: none;
-}
+  height: 0 !important
