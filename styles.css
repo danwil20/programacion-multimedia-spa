@@ -43,45 +43,57 @@ nav a:hover {
   color: #ffa500;
 }
 
-/* MAIN */
+/* MAIN – espacio reducido */
 main {
   background: white;
   width: 90%;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 12px auto;      /* ⬅️ menos espacio */
+  padding: 15px;          /* ⬅️ menos padding */
   border-radius: 10px;
   flex: 1;
 }
 
-/* LAYOUT */
+/* LAYOUT – TODO CENTRADO */
 .layout {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;     /* ⬅️ centra imágenes verticalmente */
+  justify-content: center;
   gap: 20px;
 }
 
+/* TEXTO */
 .texto-centro {
   flex: 2;
-  text-align: left;
+  text-align: center;      /* ⬅️ texto centrado */
 }
 
+p {
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+/* IMÁGENES */
 .img-lado {
-  max-width: 180px;
+  max-width: 160px;        /* ⬅️ un poco más pequeñas */
   border-radius: 10px;
 }
 
-h2 {
+/* LISTAS */
+ul {
+  list-style-position: inside;
+  padding: 0;
+  margin: 10px 0;
   text-align: center;
 }
 
-ul {
-  margin-left: 20px;
+ul li {
+  margin: 4px 0;
 }
 
+/* VIDEO */
 video {
   display: block;
-  margin: 15px auto 0 auto;
+  margin: 12px auto 0 auto;
 }
 
 /* FOOTER */
