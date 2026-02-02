@@ -17,13 +17,13 @@ header {
   background-color: #ff4500;
   color: white;
   text-align: center;
-  padding: 20px 10px;
+  padding: 25px 10px;
 }
 
 /* NAV */
 nav {
   background-color: #333;
-  padding: 12px;
+  padding: 14px;
   text-align: center;
 }
 
@@ -39,13 +39,13 @@ nav a:hover {
   color: #ffa500;
 }
 
-/* MAIN → más aire, pero controlado */
+/* MAIN → más aire en inicio y contacto */
 main {
   background: white;
   width: 90%;
-  margin: 15px auto;
-  padding: 25px; /* 👈 más espacio */
-  border-radius: 10px;
+  margin: 25px auto;
+  padding: 40px; /* 👈 MÁS espacio en blanco */
+  border-radius: 12px;
 }
 
 /* LAYOUT */
@@ -53,43 +53,45 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 25px;
 }
 
+/* TEXTO */
 .texto-centro {
-  text-align: center;
   flex: 2;
+  text-align: center;
+}
+
+.texto-centro p {
+  margin: 10px 0;
+  line-height: 1.7;
 }
 
 /* IMÁGENES */
 .img-lado {
-  max-width: 170px;
-  border-radius: 10px;
-}
-
-/* TEXTO */
-p {
-  margin: 8px 0;
-  line-height: 1.6;
+  max-width: 180px;
+  border-radius: 12px;
 }
 
 /* RUTINAS */
-.rutina-texto {
-  max-width: 750px;
-  margin: 10px auto;
-  text-align: left;
+.rutinas-centrado {
+  text-align: center;
 }
 
-ul {
-  max-width: 750px;
-  margin: 10px auto;
-  text-align: left;
+.rutinas-centrado ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.rutinas-centrado li {
+  margin: 6px 0;
 }
 
 /* VIDEO */
 video {
   display: block;
-  margin: 15px auto 0 auto;
+  margin: 20px auto 0 auto;
 }
 
 /* FOOTER */
