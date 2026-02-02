@@ -72,8 +72,8 @@ function cargarSeccion(seccion) {
           </ul>
 
           <p class="rutina-texto">
-            Ejercicios: press banca, dominadas, sentadillas, hip thrust,
-            press militar, curl bíceps y trabajo de core.
+            Ejercicios: press banca, dominadas, sentadillas,
+            hip thrust, press militar y trabajo de core.
           </p>
 
           <video id="videoRutina" width="320">
