@@ -72,7 +72,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* ===== ANIMACIÓN CSS ===== */
+/* Animación */
 @keyframes aparecer {
   from {
     opacity: 0;
@@ -88,8 +88,19 @@ button:hover {
   animation: aparecer 1s ease-in-out;
 }
 
+/* Rutinas */
+.rutina-texto {
+  text-align: left;
+  margin: 10px auto;
+  max-width: 500px;
+}
+
 /* Error */
 #mensajeError {
   color: red;
   margin-top: 10px;
+}
+
+hr {
+  margin: 20px 0;
 }
