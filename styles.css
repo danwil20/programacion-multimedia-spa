@@ -43,42 +43,48 @@ nav a:hover {
   color: #ffa500;
 }
 
-/* MAIN – espacio reducido */
+/* MAIN */
 main {
   background: white;
   width: 90%;
-  margin: 12px auto;      /* ⬅️ menos espacio */
-  padding: 15px;          /* ⬅️ menos padding */
+  margin: 12px auto;
   border-radius: 10px;
   flex: 1;
+
+  /* 🔥 CLAVE */
+  display: flex;
+  justify-content: center;
 }
 
-/* LAYOUT – TODO CENTRADO */
+/* CONTENIDO */
+#contenido {
+  width: 100%;
+  padding: 20px;
+
+  /* 🔥 centra verticalmente cuando hay poco contenido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LAYOUT */
 .layout {
   display: flex;
-  align-items: center;     /* ⬅️ centra imágenes verticalmente */
+  align-items: center;
   justify-content: center;
   gap: 20px;
 }
 
-/* TEXTO */
 .texto-centro {
   flex: 2;
-  text-align: center;      /* ⬅️ texto centrado */
+  text-align: center;
 }
 
-p {
-  margin: 6px 0;
-  line-height: 1.6;
-}
-
-/* IMÁGENES */
 .img-lado {
-  max-width: 160px;        /* ⬅️ un poco más pequeñas */
+  max-width: 160px;
   border-radius: 10px;
 }
 
-/* LISTAS */
 ul {
   list-style-position: inside;
   padding: 0;
@@ -86,11 +92,6 @@ ul {
   text-align: center;
 }
 
-ul li {
-  margin: 4px 0;
-}
-
-/* VIDEO */
 video {
   display: block;
   margin: 12px auto 0 auto;
