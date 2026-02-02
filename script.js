@@ -31,15 +31,6 @@ function cargarRutinas() {
           <li>Viernes: Piernas completas o circuito</li>
         </ul>
 
-        <h3>Ejercicios recomendados</h3>
-
-        <ul>
-          <li>Pecho: Press, fondos</li>
-          <li>Espalda: Dominadas, remo</li>
-          <li>Piernas: Sentadillas, prensa</li>
-          <li>Core: Planchas, crunch</li>
-        </ul>
-
         <video width="320" controls>
           <source src="rutina.mp4" type="video/mp4">
         </video>
@@ -70,6 +61,7 @@ document.querySelectorAll("nav a").forEach(link => {
   link.addEventListener("click", e => {
     e.preventDefault();
     const section = link.dataset.section;
+
     if (section === "inicio") cargarInicio();
     if (section === "rutinas") cargarRutinas();
     if (section === "contacto") cargarContacto();
