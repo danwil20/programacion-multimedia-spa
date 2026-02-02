@@ -33,25 +33,23 @@ function cargarRutinas() {
         </ul>
 
         <p>
-          Deja al menos <strong>48 horas</strong> entre el trabajo de un mismo grupo muscular
-          para favorecer la recuperación.
+          Deja al menos <strong>48 horas</strong> entre el trabajo de un mismo grupo muscular.
         </p>
 
-        <h3>Ejercicios recomendados por grupo muscular</h3>
+        <h3>Ejercicios recomendados</h3>
 
         <ul>
           <li><strong>Pecho:</strong> Press de banca, fondos, aperturas</li>
-          <li><strong>Espalda:</strong> Dominadas, remo, jalón al pecho</li>
-          <li><strong>Piernas:</strong> Sentadillas, prensa, zancadas, curl femoral</li>
-          <li><strong>Glúteos:</strong> Hip thrust, peso muerto rumano, abducciones</li>
-          <li><strong>Hombros:</strong> Press militar, elevaciones laterales, pájaros</li>
-          <li><strong>Brazos:</strong> Curl bíceps, extensiones de tríceps, curl martillo</li>
-          <li><strong>Core:</strong> Planchas, crunch, elevaciones de piernas, superman</li>
+          <li><strong>Espalda:</strong> Dominadas, remo, jalón</li>
+          <li><strong>Piernas:</strong> Sentadillas, prensa, zancadas</li>
+          <li><strong>Glúteos:</strong> Hip thrust, peso muerto</li>
+          <li><strong>Hombros:</strong> Press militar, elevaciones</li>
+          <li><strong>Brazos:</strong> Curl bíceps, tríceps</li>
+          <li><strong>Core:</strong> Planchas, crunch, superman</li>
         </ul>
 
         <video width="320" controls>
           <source src="rutina.mp4" type="video/mp4">
-          Tu navegador no soporta video.
         </video>
       </div>
 
