@@ -3,40 +3,47 @@ const contenido = document.getElementById("contenido");
 function cargarInicio() {
   contenido.innerHTML = `
     <div class="layout">
-      <img src="Gym.jpg" class="img-lado">
+      <img src="Gym.jpg" class="img-lado" alt="Gym">
       <div class="texto-centro">
         <h2>Bienvenido al Gym Fitness</h2>
         <p>Entrena desde casa o en el gimnasio con nuestras rutinas.</p>
         <p>Mejora tu fuerza, resistencia y disciplina.</p>
       </div>
-      <img src="Gym2.jpg" class="img-lado">
+      <img src="Gym2.jpg" class="img-lado" alt="Gym">
     </div>
   `;
 }
 
 function cargarRutinas() {
   contenido.innerHTML = `
-    <div class="layout">
-      <img src="Gym.jpg" class="img-lado">
+    <div class="texto-centro">
+      <h2>Rutina de 5 días (split por grupos musculares)</h2>
+      <p>Para niveles intermedios/avanzados que buscan ganar masa muscular.</p>
 
-      <div class="texto-centro">
-        <h2>Rutina de 5 días (Split muscular)</h2>
-        <p><strong>Para niveles intermedios / avanzados</strong></p>
+      <p><strong>Lunes:</strong> pecho + tríceps</p>
+      <p><strong>Martes:</strong> espalda + bíceps</p>
+      <p><strong>Miércoles:</strong> piernas + glúteos</p>
+      <p><strong>Jueves:</strong> hombros + abdominales</p>
+      <p><strong>Viernes:</strong> sesión completa de piernas o circuito metabólico</p>
 
-        <ul>
-          <li>Lunes: Pecho + tríceps</li>
-          <li>Martes: Espalda + bíceps</li>
-          <li>Miércoles: Piernas + glúteos</li>
-          <li>Jueves: Hombros + abdominales</li>
-          <li>Viernes: Piernas completas o circuito</li>
-        </ul>
+      <p class="rutina-texto">
+        Deja al menos 48 horas entre el trabajo de un mismo grupo muscular para favorecer la recuperación.
+      </p>
 
-        <video width="320" controls>
-          <source src="rutina.mp4" type="video/mp4">
-        </video>
-      </div>
+      <h3>Ejercicios recomendados</h3>
+      <ul>
+        <li><strong>Pecho:</strong> Press de banca, fondos, aperturas</li>
+        <li><strong>Espalda:</strong> Dominadas, remo, jalón al pecho</li>
+        <li><strong>Piernas:</strong> Sentadillas, prensa, zancadas</li>
+        <li><strong>Glúteos:</strong> Hip thrust, peso muerto rumano</li>
+        <li><strong>Hombros:</strong> Press militar, elevaciones laterales</li>
+        <li><strong>Brazos:</strong> Curl bíceps, extensiones tríceps</li>
+        <li><strong>Core:</strong> Plancha, crunches, superman</li>
+      </ul>
 
-      <img src="Gym2.jpg" class="img-lado">
+      <video width="320" controls>
+        <source src="rutina.mp4" type="video/mp4">
+      </video>
     </div>
   `;
 }
@@ -44,7 +51,7 @@ function cargarRutinas() {
 function cargarContacto() {
   contenido.innerHTML = `
     <div class="layout">
-      <img src="Gym.jpg" class="img-lado">
+      <img src="Gym.jpg" class="img-lado" alt="Gym">
       <div class="texto-centro">
         <h2>Contacto</h2>
         <input type="email" placeholder="Ingresa tu email">
@@ -52,7 +59,7 @@ function cargarContacto() {
         <p><strong>Instagram:</strong> @danwil16</p>
         <p><strong>Correo:</strong> finesacademicosdaniel@gmail.com</p>
       </div>
-      <img src="Gym2.jpg" class="img-lado">
+      <img src="Gym2.jpg" class="img-lado" alt="Gym">
     </div>
   `;
 }
