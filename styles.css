@@ -107,3 +107,17 @@ button:hover {
   color: red;
   margin-top: 10px;
 }
+
+/* 🔥 ELIMINAR CUALQUIER LINEA HORIZONTAL */
+hr {
+  display: none !important;
+  border: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Por seguridad visual */
+video {
+  border: none;
+}
