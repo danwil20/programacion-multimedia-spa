@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function cargarSeccion(seccion) {
   let contenidoHTML = "";
 
-  // ✅ INICIO (sin la palabra SPA)
   if (seccion === "inicio") {
     contenidoHTML = `
       <div class="layout">
@@ -38,8 +37,7 @@ function cargarSeccion(seccion) {
 
           <button id="btnInfo">Mostrar Descripción</button>
           <p id="info" style="display:none;">
-            Este sitio muestra rutinas y consejos de entrenamiento
-            sin recargar la página.
+            Este sitio muestra rutinas y tips de entrenamiento sin recargar la página.
           </p>
         </div>
 
